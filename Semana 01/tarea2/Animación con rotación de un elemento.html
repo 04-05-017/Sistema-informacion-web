@@ -1,0 +1,33 @@
+Maestría en Electrónica - Enfasis TIC
+Módulo: Sistemas de Información Web
+Alumna: Mónica Beatriz Torres Ibarrola
+            TAREA 02
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación: Rotación de un elemento</title>
+  <style>
+    .spinner {
+      width: 100px;
+      height: 100px;
+      background: purple;
+      margin: 50px auto;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>02.Animación con rotación de un elemento</h1>
+  <div class="spinner"></div>
+</body>
+</html>

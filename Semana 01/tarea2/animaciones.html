@@ -1,0 +1,59 @@
+Maestría en Electrónica - Enfasis TIC
+Módulo: Sistemas de Información Web
+Alumna: Mónica Beatriz Torres Ibarrola
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Animaciones CSS</title>
+  <style>
+    /* Ejemplo 1: Animación de un Botón con Cambio de Color */
+    button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      transition: background-color 0.5s ease;
+    }
+    button:hover {
+      background-color: red;
+    }
+    
+    /* Ejemplo 2: Animación de Deslizamiento de un Cuadro */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      position: relative;
+      animation: slide 2s infinite alternate;
+    }
+    @keyframes slide {
+      from { left: 0; }
+      to { left: 200px; }
+    }
+    
+    /* Ejemplo 3: Animación de Aparición de Texto (Fade In) */
+    .text {
+      font-size: 24px;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Animación de Botón</h2>
+  <button>Prueba el Botón</button>
+  
+  <h2>Animación de Deslizamiento</h2>
+  <div class="box"></div>
+  
+  <h2>Animación de Aparición de Texto</h2>
+  <p class="text">¡MI PRIMERA PÁGINA WEB MIX ANIMADA!</p>
+</body>
+</html>
