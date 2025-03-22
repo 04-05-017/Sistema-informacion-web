@@ -1,0 +1,34 @@
+Maestría en Electrónica - Enfasis TIC
+Módulo: Sistemas de Información Web
+Alumna: Mónica Beatriz Torres Ibarrola
+            TAREA 02
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animación: Movimiento de Caja</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      /* La animación se ejecuta en 3 segundos de forma infinita, alternando la dirección */
+      animation: mover 3s infinite alternate;
+    }
+    @keyframes mover {
+      from {
+        left: 0;
+      }
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>01.Animación con desplazamiento horizontal</h1>
+  <div class="box"></div>
+</body>
+</html>
