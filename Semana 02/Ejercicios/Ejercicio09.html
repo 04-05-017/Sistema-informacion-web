@@ -1,0 +1,71 @@
+Maestría en Electrónica - Enfasis TIC
+Módulo: Sistemas de Información Web
+Alumna: Mónica Beatriz Torres Ibarrola
+            TAREA 03
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Año Bisiesto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #b37ae6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b267e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Verificar Año Bisiesto</h2>
+        <label for="anio">Ingrese un año:</label>
+        <input type="number" id="anio" placeholder="Ejemplo: 2024">
+        
+        <button id="verificar">Verificar</button>
+    </div>
+
+    <script>
+        document.getElementById("verificar").addEventListener("click", function() {
+            let anio = parseInt(document.getElementById("anio").value);
+            
+            if (isNaN(anio) || anio <= 0) {
+                alert("Por favor, ingrese un año válido");
+                return;
+            }
+            
+            if ((anio % 4 === 0 && anio % 100 !== 0) || (anio % 400 === 0)) {
+                alert(`${anio} Es un año bisiesto.`);
+            } else {
+                alert(`${anio} No es un año bisiesto.`);
+            }
+        });
+    </script>
+</body>
+</html>

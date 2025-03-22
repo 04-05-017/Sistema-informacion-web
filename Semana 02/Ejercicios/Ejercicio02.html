@@ -1,0 +1,57 @@
+Maestría en Electrónica - Enfasis TIC
+Módulo: Sistemas de Información Web
+Alumna: Mónica Beatriz Torres Ibarrola
+            TAREA 03
+            
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Conversor de Temperatura</h2>
+        <label for="celsius">Temperatura en °C:</label>
+        <input type="number" id="celsius" placeholder="Ingrese temperatura en °C">
+        
+        <button onclick="convertir()">Convertir a Fahrenheit</button>
+        <h3>Resultado: <span id="resultado">0</span> °F</h3>
+    </div>
+
+    <script>
+        function convertir() {
+            let celsius = parseFloat(document.getElementById("celsius").value);
+            
+            if (isNaN(celsius)) {
+                alert("Por favor, ingrese un valor válido");
+                return;
+            }
+            
+            let fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("resultado").textContent = fahrenheit.toFixed(2);
+        }
+    </script>
+</body>
+</html>
